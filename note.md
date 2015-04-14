@@ -26,8 +26,9 @@ file_roots:
 
 - Minion 
 
-Ubuntu: apt-get install salt-minion -y
-CentOS: rpm -Uvh http://ftp.linux.ncsu.edu/pub/epel/6/i386/epel-release-6-8.noarch.rpm && yum install salt-minion -y
+Ubuntu: `apt-get install salt-minion -y`
+
+CentOS: `rpm -Uvh http://ftp.linux.ncsu.edu/pub/epel/6/i386/epel-release-6-8.noarch.rpm && yum install salt-minion -y`
 
 `vi /etc/salt/minion`
 

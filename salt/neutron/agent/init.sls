@@ -29,7 +29,7 @@ ml2_conf.ini:
      - pkg: neutron_agent_pkgs     
           
 {% for service in salt['pillar.get']('neutron-agent:services', []) %}
-service_{{ service }}:
+service_{{ service }}_restart:
   service.running:
    - name: {{ service}}
    - watch:

@@ -29,7 +29,7 @@ base:
     - nova.nova-compute
     - neutron.agent
 
-  'cinder':
+  'cinder*':
     - hosts
     - prepare
     - ntp

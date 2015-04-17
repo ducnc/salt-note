@@ -1,5 +1,6 @@
 #IP config
 {% set CON_MGNT_IP = '10.10.10.51' %}
+{% set CON_EXT_IP = '192.168.5.51' %}
 {% set TUNNEL_IP = grains['ip_interfaces']['eth0'][0] %}
 {% set EXTERNAL_IP = grains['ip_interfaces']['eth1'][0] %}
 {% set EXTERNAL_INTERFACE = 'eth1' %}
@@ -251,7 +252,7 @@ nova-compute:
   - sysfsutils
   - libguestfs-tools 
  tunnel_ip: {{ TUNNEL_IP }}
- proxy_ip: {{ CON_MGNT_IP }}
+ proxy_ip: {{ CON_EXT_IP }}
  dbname: 'nova'
  dbuser: 'nova'
  dbpass: {{ NOVA_DBPASS }}

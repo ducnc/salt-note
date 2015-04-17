@@ -9,8 +9,8 @@ neutron_agent_pkgs:
 neutron-agent.conf:
  file.managed:
   - name: /etc/neutron/neutron.conf
-  - user: neutron
-  - group: neutron
+  - user: root
+  - group: root
   - mode: 644
   - source: salt://neutron/agent/files/neutron.conf
   - template: jinja
@@ -20,8 +20,8 @@ neutron-agent.conf:
 ml2_conf.ini:
  file.managed:
   - name: /etc/neutron/plugins/ml2/ml2_conf.ini
-  - user: neutron
-  - group: neutron
+  - user: root
+  - group: root
   - mode: 644
   - source: salt://neutron/agent/files/ml2_conf.ini
   - template: jinja

@@ -11,7 +11,7 @@ kernel_statoverride:
   - name: /etc/kernel/postinst.d/statoverride
   - user: root
   - group: root
-  - mode: 644
+  - mode: 755
   - source: salt://nova/nova-compute/files/statoverride
 
 config_ip_forward:
@@ -20,7 +20,6 @@ config_ip_forward:
      echo "net.ipv4.conf.all.rp_filter=0" >> /etc/sysctl.conf
      echo "net.ipv4.conf.default.rp_filter=0" >> /etc/sysctl.conf
      sysctl -p
-     chmod +x /etc/kernel/postinst.d/statoverride
   - unless: cat /etc/sysctl.conf | grep -v ^$ | grep -v ^#
 
 nova-compute.conf:

@@ -1,25 +1,25 @@
 base:
-  'controller':
-    - hosts
-    - prepare
-    - ntp
-    - rabbit
-    - mysql
-    - keystone
-    - keystone.create-user-tenant
-    - glance
-    - nova.nova-api
-    - neutron.api
-    - cinder.api
-    - horizon
+#  'controller':
+#    - hosts
+#    - prepare
+#    - ntp
+#    - rabbit
+#    - mysql
+#    - keystone
+#    - keystone.create-user-tenant
+#    - glance
+#    - nova.nova-api
+#    - neutron.api
+#    - cinder.api
+#    - horizon
 
-  'network*':
-    - hosts
-    - prepare
-    - python-mysql
-    - ntp
-    - neutron.openvswitch
-    - neutron.network
+#  'network*':
+#    - hosts
+#    - prepare
+#    - python-mysql
+#    - ntp
+#    - neutron.openvswitch
+#    - neutron.network
     
   'compute*':
     - hosts
@@ -29,8 +29,8 @@ base:
     - nova.nova-compute
     - neutron.agent
 
-  'cinder*':
-    - hosts
-    - prepare
-    - ntp
-    - cinder.volume
+#  'cinder*':
+#    - hosts
+#    - prepare
+#    - ntp
+#    - cinder.volume

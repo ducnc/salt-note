@@ -30,11 +30,6 @@ set_localhost_root_password:
       - pkg: mysql-server
       - service: mysql
       
-# Tao password root
-#create_password_root:
-#  cmd.run:
-#    - name: /usr/bin/mysqladmin password {{ pillar['mysql']['server']['root_password'] }}
-
 # Create databases
 {% for db in salt['pillar.get']('mysql:databases', []) %}
 create_database_{{ db }}:

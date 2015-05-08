@@ -63,27 +63,27 @@ mysql:
     port: 3306
   users:
     - name: keystone
-      host: ['CON_MGNT_IPhost', '%']
+      host: ['localhost', '%']
       password: {{ KEYSTONE_DBPASS }}
       privileges: all privileges
       database_name: keystone
     - name: cinder
-      host: ['CON_MGNT_IPhost', '%']
+      host: ['localhost', '%']
       password: {{ CINDER_DBPASS }}
       privileges: all privileges
       database_name: cinder
     - name: nova
-      host: ['CON_MGNT_IPhost', '%']
+      host: ['localhost', '%']
       password: {{ NOVA_DBPASS }}
       privileges: all privileges
       database_name: nova
     - name: glance
-      host: ['CON_MGNT_IPhost', '%']
+      host: ['localhost', '%']
       password: {{ GLANCE_DBPASS }}
       privileges: all privileges
       database_name: glance
     - name: neutron
-      host: ['CON_MGNT_IPhost', '%']
+      host: ['localhost', '%']
       password: {{ NEUTRON_DBPASS }}
       privileges: all privileges
       database_name: neutron
